@@ -56,10 +56,15 @@ const LeftSection = () => {
             <select
               name="origin"
               onChange={handleChange}
-              defaultValue={search?.origin || "london"}
+              defaultValue={search?.origin || 1}
             >
+              <option value={1} disabled>Please Select Your origin Area</option>
               {data.map((train) => {
-                return <option key={train.flight_id}>{train.origin}</option>;
+                return (
+                  <option key={train.flight_id} value={train.flight_id}>
+                    {train.origin}
+                  </option>
+                );
               })}
             </select>
           </div>
@@ -67,11 +72,16 @@ const LeftSection = () => {
             <select
               name="destination"
               onChange={handleChange}
-              defaultValue={search?.destination || "paris"}
+              defaultValue={search?.destination || 1}
             >
+              <option value={1} disabled>
+                Please Select Your Destination
+              </option>
               {data.map((train) => {
                 return (
-                  <option key={train.flight_id}>{train.destination}</option>
+                  <option key={train.flight_id} value={train.flight_id}>
+                    {train.destination}
+                  </option>
                 );
               })}
             </select>
