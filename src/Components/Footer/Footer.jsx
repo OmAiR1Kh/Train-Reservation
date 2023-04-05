@@ -10,7 +10,7 @@ import {
   TbBrandFacebook,
   TbBrandInstagram,
   TbBrandTwitter,
-} from "react-icons/Tb";
+} from "react-icons/tb";
 import { Link, useNavigate } from "react-router-dom";
 
 const Footer = () => {
