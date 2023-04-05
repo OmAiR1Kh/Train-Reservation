@@ -1,0 +1,98 @@
+.footer-container {
+  background: #0578ff;
+  width: 100%;
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  gap: 20%;
+  color: #fff;
+}
+.footer-container section {
+  width: 90%;
+  margin: auto;
+  height: 50px;
+}
+.footer-container .upper-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-container .upper-section > p {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+.footer-container .upper-section .subscribe-text {
+  display: flex;
+  flex-direction: column;
+}
+.footer-container .upper-section .subscribe-text span {
+  font-size: 0.8rem;
+}
+.footer-container .upper-section .newsletter-form {
+  border-bottom: 1px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0.5rem;
+  width: 40%;
+}
+.footer-container .upper-section .newsletter-form input {
+  border: none;
+  outline: none;
+  width: 85%;
+  background: transparent;
+  color: #fff;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+.footer-container .upper-section .newsletter-form input::-moz-selection {
+  color: #000;
+  background: #fff;
+}
+.footer-container .upper-section .newsletter-form input::selection {
+  color: #000;
+  background: #fff;
+}
+.footer-container .upper-section .newsletter-form input::-moz-placeholder {
+  color: #fff;
+}
+.footer-container .upper-section .newsletter-form input::placeholder {
+  color: #fff;
+}
+.footer-container .upper-section .newsletter-form input:focus {
+  outline: none;
+}
+.footer-container .upper-section .newsletter-form svg {
+  cursor: pointer;
+}
+.footer-container .bottom-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-container .bottom-section ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  width: 50%;
+}
+.footer-container .bottom-section ul li {
+  font-size: 0.8rem;
+}
+.footer-container .bottom-section ul li a {
+  color: #fff;
+}
+.footer-container .bottom-section div {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1.5rem;
+}
+.footer-container .bottom-section div svg {
+  font-size: 1.2rem;
+  cursor: pointer;
+}/*# sourceMappingURL=footer.css.map */

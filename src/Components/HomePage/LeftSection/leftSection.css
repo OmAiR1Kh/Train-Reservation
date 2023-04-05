@@ -1,0 +1,85 @@
+.left-section {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  line-height: 0;
+  gap: 20%;
+  padding-top: 1.5rem;
+  padding-left: 3rem;
+}
+.left-section .home-content {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  gap: 0.5rem;
+  line-height: 1.2;
+}
+.left-section .home-content .error-message {
+  color: rgb(219, 5, 5);
+  grid-column: 1/span 2;
+  justify-self: center;
+}
+.left-section .home-content button {
+  background: #0578ff;
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  padding: 0.7rem;
+  font-size: 0.8rem;
+  width: 30%;
+}
+.left-section .home-content button:focus {
+  border: none;
+  outline: none;
+}
+.left-section .home-content h2 {
+  font-size: 2.1rem;
+}
+.left-section .home-content span {
+  font-size: 0.85rem;
+}
+.left-section .home-content form {
+  width: 100%;
+  gap: 1rem;
+  display: grid;
+  justify-items: space-between;
+  grid-template-columns: 1fr 1fr;
+}
+.left-section .home-content form div {
+  border-bottom: 1px solid #808080;
+  padding: 0.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.left-section .home-content form div select,
+.left-section .home-content form div input {
+  width: 100%;
+  border: none;
+  outline: none;
+  width: 90%;
+  color: #808080;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  text-indent: 1px;
+  text-overflow: "";
+}
+.left-section .home-content form div select::-webkit-inner-spin-button, .left-section .home-content form div select::-webkit-calendar-picker-indicator,
+.left-section .home-content form div input::-webkit-inner-spin-button,
+.left-section .home-content form div input::-webkit-calendar-picker-indicator {
+  content: url("../../../assets/calendar.svg");
+  width: 20px;
+  height: 20px;
+  background: none;
+  cursor: pointer;
+}
+.left-section .home-content form div select:focus,
+.left-section .home-content form div input:focus {
+  border: none;
+  outline: none;
+}
+.left-section .home-content form button {
+  border-radius: 12px;
+}/*# sourceMappingURL=leftSection.css.map */

@@ -1,0 +1,21 @@
+.navbar {
+  background: #fff;
+  max-width: 100%;
+  margin: 0;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar p {
+  cursor: pointer;
+}
+.navbar div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 20%;
+}/*# sourceMappingURL=navbar.css.map */

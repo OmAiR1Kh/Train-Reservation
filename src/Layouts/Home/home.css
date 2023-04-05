@@ -1,0 +1,12 @@
+.home-container {
+  display: flex;
+  justify-content: space-between;
+}
+.home-container .train-image {
+  min-width: 50%;
+}
+.home-container .train-image img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}/*# sourceMappingURL=home.css.map */

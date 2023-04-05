@@ -1,0 +1,86 @@
+.left-section {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  line-height: 0;
+  gap: 20%;
+  padding: {
+    top: 1.5rem;
+    left: 3rem;
+  }
+  .home-content {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    gap: 0.5rem;
+    line-height: 1.2;
+    .error-message {
+      color: rgb(219, 5, 5);
+      grid-column: 1 / span 2;
+      justify-self: center;
+    }
+    button {
+      background: #0578ff;
+      color: #fff;
+      border: none;
+      outline: none;
+      border-radius: 20px;
+      padding: 0.7rem;
+      font-size: 0.8rem;
+      width: 30%;
+      &:focus {
+        border: none;
+        outline: none;
+      }
+    }
+    h2 {
+      font-size: 2.1rem;
+    }
+    span {
+      font-size: 0.85rem;
+    }
+    form {
+      width: 100%;
+      gap: 1rem;
+      display: grid;
+      // place-items: center;
+      justify-items: space-between;
+      grid-template-columns: 1fr 1fr;
+      div {
+        border-bottom: 1px solid #808080;
+        padding: 0.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        select,
+        input {
+          width: 100%;
+          border: none;
+          outline: none;
+          width: 90%;
+          color: #808080;
+          appearance: none;
+          &::-webkit-inner-spin-button,
+          &::-webkit-calendar-picker-indicator {
+            // display: none;
+            // appearance: none;
+            content: url("../../../assets/calendar.svg");
+            width: 20px;
+            height: 20px;
+            background: none;
+            cursor: pointer;
+          }
+          text-indent: 1px;
+          text-overflow: "";
+          &:focus {
+            border: none;
+            outline: none;
+          }
+        }
+      }
+      button {
+        border-radius: 12px;
+      }
+    }
+  }
+}

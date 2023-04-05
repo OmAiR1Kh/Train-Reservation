@@ -1,0 +1,23 @@
+.navbar {
+  background: #fff;
+  max-width: 100%;
+  margin: 0;
+  padding: {
+    left: 1.5rem;
+    right: 1.5rem;
+    top: 1rem;
+    bottom: 1rem;
+  }
+  p {
+    cursor: pointer;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 20%;
+  }
+}
