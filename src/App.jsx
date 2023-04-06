@@ -10,6 +10,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import Theme from "./Components/Theme/Theme";
 import Home from "./Layouts/Home/Home";
 import { useCallback, useEffect, useState } from "react";
+import Results from "./Layouts/SearchResuts/Results";
 
 const App = () => {
   const location = useLocation();
@@ -23,14 +24,11 @@ const App = () => {
   return (
     <div className="App">
       {location.pathname !== "/" && <Navbar />}
-      <Theme>
+      <Theme background={location.pathname !== "/" && "#f5f5f5"}>
         <Routes>
           <Route path="/" element={<Home />}></Route>
           {isSearching && (
-            <Route
-              path="/search-results"
-              element={<p>Search Results Page</p>}
-            />
+            <Route path="/search-results" element={<Results />} />
           )}
           <Route
             path="/*"

@@ -3,11 +3,17 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable semi */
 /* eslint-disable react/react-in-jsx-scope */
+import Search from '../../Components/SearchResults/Search';
+import SearchResults from '../../Components/SearchResults/SearchResults';
+import './results.css'
 
 const Results = () => {
   return (
     <>
-      <div className="results-container"></div>
+      <div className="results-container">
+        <Search />
+        <SearchResults />
+      </div>
     </>
   );
 };

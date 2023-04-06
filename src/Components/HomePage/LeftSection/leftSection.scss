@@ -43,7 +43,6 @@
       width: 100%;
       gap: 1rem;
       display: grid;
-      // place-items: center;
       justify-items: space-between;
       grid-template-columns: 1fr 1fr;
       div {
@@ -62,8 +61,6 @@
           appearance: none;
           &::-webkit-inner-spin-button,
           &::-webkit-calendar-picker-indicator {
-            // display: none;
-            // appearance: none;
             content: url("../../../assets/calendar.svg");
             width: 20px;
             height: 20px;

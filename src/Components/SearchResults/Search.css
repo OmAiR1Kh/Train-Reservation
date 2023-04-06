@@ -1,0 +1,121 @@
+.res-container {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+.res-container .result-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: space-between;
+  gap: 1rem;
+}
+.res-container .result-form div {
+  border-bottom: 1px solid #808080;
+  padding: 0.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.res-container .result-form div select,
+.res-container .result-form div input {
+  width: 100%;
+  border: none;
+  outline: none;
+  width: 90%;
+  color: #808080;
+  background: transparent;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  text-indent: 1px;
+  text-overflow: "";
+}
+.res-container .result-form div select::-webkit-inner-spin-button, .res-container .result-form div select::-webkit-calendar-picker-indicator,
+.res-container .result-form div input::-webkit-inner-spin-button,
+.res-container .result-form div input::-webkit-calendar-picker-indicator {
+  content: url("../../assets/calendar.svg");
+  width: 20px;
+  height: 20px;
+  background: none;
+  cursor: pointer;
+}
+.res-container .result-form div select:focus,
+.res-container .result-form div input:focus {
+  border: none;
+  outline: none;
+}
+.res-container .result-form button {
+  border-radius: 12px;
+  background: #0578ff;
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  padding: 0.7rem;
+  font-size: 0.8rem;
+  width: 30%;
+}
+.res-container .result-form button:focus {
+  border: none;
+  outline: none;
+}
+.res-container > div {
+  color: white;
+  height: 6rem;
+  background-size: cover;
+  background-blend-mode: darken;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  mix-blend-mode: luminosity;
+}
+.res-container > div > p {
+  width: 90%;
+  color: #ffffff;
+}
+.res-container .palms {
+  background: url("../../assets/palms.jpg");
+  background-position: bottom;
+  background-size: cover;
+}
+.res-container .temple {
+  background: url("../../assets/temple.webp");
+  background-position: center;
+}
+.res-container .temple > p {
+  color: #fafafa;
+}
+
+.results {
+  width: 40%;
+}
+.results .results-header {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.5254901961);
+}
+.results .results-header span {
+  font-size: 0.6rem;
+}
+.results .results-header img {
+  position: relative;
+  left: 40%;
+}
+.results .results-content {
+  max-height: 70vh;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  overflow-y: scroll;
+}
+.results .results-content::-webkit-scrollbar {
+  background-color: #fff;
+  width: 8px;
+}
+.results .results-content::-webkit-scrollbar-thumb {
+  background-color: #0578ff;
+  border-radius: 5px;
+}/*# sourceMappingURL=Search.css.map */

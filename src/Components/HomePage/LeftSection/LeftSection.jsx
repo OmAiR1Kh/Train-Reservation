@@ -1,3 +1,4 @@
+/* eslint-disable comma-dangle */
 /* eslint-disable react/prop-types */
 /* eslint-disable quotes */
 /* eslint-disable no-unused-vars */
@@ -5,14 +6,14 @@
 /* eslint-disable react/react-in-jsx-scope */
 import data from "../../../TrainData.json";
 import { useNavigate } from "react-router-dom";
-import calendar from "../../../assets/calendar.svg";
+import { useDispatch } from "react-redux";
 import "./leftSection.css";
 import { useState } from "react";
 const LeftSection = () => {
   const [search, setSearch] = useState({});
   const [error, setError] = useState("");
   const nav = useNavigate();
-
+  const dispatch = useDispatch();
   const handleChange = (e) => {
     const { name, value } = e.target;
     setSearch({ ...search, [name]: value });
@@ -22,7 +23,13 @@ const LeftSection = () => {
     e.preventDefault();
     if (search.origin && search.destination && search.date) {
       localStorage.setItem("search-data", JSON.stringify(search));
+      dispatch({ type: "SEARCH_DONE", payload: { searchState: search } });
       nav("/search-results");
+      window.scroll({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+      });
     } else {
       setError("Please Fill All the required fields");
       setTimeout(() => {
@@ -58,10 +65,12 @@ const LeftSection = () => {
               onChange={handleChange}
               defaultValue={search?.origin || 1}
             >
-              <option value={1} disabled>Please Select Your origin Area</option>
+              <option value={1} disabled>
+                Please Select Your origin Area
+              </option>
               {data.map((train) => {
                 return (
-                  <option key={train.flight_id} value={train.flight_id}>
+                  <option key={train.flight_id} value={train.origin}>
                     {train.origin}
                   </option>
                 );
@@ -79,7 +88,7 @@ const LeftSection = () => {
               </option>
               {data.map((train) => {
                 return (
-                  <option key={train.flight_id} value={train.flight_id}>
+                  <option key={train.flight_id} value={train.destination}>
                     {train.destination}
                   </option>
                 );

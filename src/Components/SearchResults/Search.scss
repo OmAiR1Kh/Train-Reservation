@@ -1,0 +1,116 @@
+.res-container {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  .result-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: space-between;
+    gap: 1rem;
+    div {
+      border-bottom: 1px solid #808080;
+      padding: 0.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      select,
+      input {
+        width: 100%;
+        border: none;
+        outline: none;
+        width: 90%;
+        color: #808080;
+        background: transparent;
+        appearance: none;
+        &::-webkit-inner-spin-button,
+        &::-webkit-calendar-picker-indicator {
+          content: url("../../assets/calendar.svg");
+          width: 20px;
+          height: 20px;
+          background: none;
+          cursor: pointer;
+        }
+        text-indent: 1px;
+        text-overflow: "";
+        &:focus {
+          border: none;
+          outline: none;
+        }
+      }
+    }
+    button {
+      border-radius: 12px;
+      background: #0578ff;
+      color: #fff;
+      border: none;
+      outline: none;
+      border-radius: 20px;
+      padding: 0.7rem;
+      font-size: 0.8rem;
+      width: 30%;
+      &:focus {
+        border: none;
+        outline: none;
+      }
+    }
+  }
+  & > div {
+    color: white;
+    height: 6rem;
+    background-size: cover;
+    background-blend-mode: darken;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    mix-blend-mode: luminosity;
+    & > p {
+      width: 90%;
+      color: #ffffff;
+    }
+  }
+  .palms {
+    background: url("../../assets/palms.jpg");
+    background-position: bottom;
+    background-size: cover;
+  }
+  .temple {
+    background: url("../../assets/temple.webp");
+    background-position: center;
+    & > p {
+      color: #fafafa;
+    }
+  }
+}
+.results {
+  width: 40%;
+  .results-header {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #80808086;
+    span {
+      font-size: 0.6rem;
+    }
+    img {
+      position: relative;
+      left: 40%;
+    }
+  }
+  .results-content {
+    max-height: 70vh;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      background-color: #fff;
+      width: 8px;
+    }
+    &::-webkit-scrollbar-thumb{
+      background-color: #0578ff;
+      border-radius: 5px;
+    }
+  }
+}

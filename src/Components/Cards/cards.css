@@ -1,0 +1,103 @@
+.card {
+  margin-right: 8px;
+  background: #fff;
+  padding: 1rem;
+  height: 380px;
+  gap: 0.5rem;
+  border-radius: 10px;
+}
+.card .runs-on {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 0.8rem;
+}
+.card .runs-on section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.card .runs-on section button {
+  border: 1px solid #0578ff;
+  background: transparent;
+  padding: 5px;
+  font-size: 0.8rem;
+}
+.card .runs-on section button:focus {
+  outline: none;
+}
+.card .runs-on span {
+  color: #0578ff;
+  font-size: 0.6rem;
+  cursor: pointer;
+}
+.card .date-data {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 0.8rem;
+}
+.card .date-data section {
+  width: 60%;
+}
+.card .date-data section p {
+  width: 100%;
+  border-bottom: 1px solid #808080;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #808080;
+}
+.card .date-data section p::before, .card .date-data section p::after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  background: #808080;
+}
+.card .date-data div {
+  line-height: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 18%;
+}
+.card .date-data div p {
+  text-align: center;
+  line-height: 1.2rem;
+}
+.card .date-data div span {
+  font-weight: 300;
+}
+.card .prices {
+  width: 100%;
+  display: flex;
+  gap: 0.5rem;
+}
+.card .prices div {
+  padding: 0.2rem;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  justify-content: space-evenly;
+  height: 80px;
+  font-size: 0.75rem;
+}
+.card .prices div span {
+  margin: 0.1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.card .prices div:first-child {
+  background: #d0ffc8;
+}
+.card .prices div:nth-child(2) {
+  background: #ffe9c8;
+}
+.card .prices div:last-child {
+  background: #ffcdcd;
+}/*# sourceMappingURL=cards.css.map */
