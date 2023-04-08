@@ -15,7 +15,11 @@ const Card = (props) => {
   };
   return (
     <>
-      <section className="card" onClick={props.onClick}>
+      <section
+        className="card"
+        onClick={props.onClick}
+        style={{ width: "90%" }}
+      >
         <h4 style={{ lineHeight: "0rem", paddingTop: "-0.2rem" }}>
           {props.destination}
         </h4>
