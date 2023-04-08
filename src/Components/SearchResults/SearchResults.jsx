@@ -4,37 +4,27 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable semi */
 /* eslint-disable react/react-in-jsx-scope */
+
 import filter from "../../assets/filter.svg";
 import { useEffect, useState } from "react";
 import trains from "../../TrainData.json";
 import { useSelector } from "react-redux";
 import "./Search.css";
 import Card from "../Cards/Cards";
+import { useNavigate } from "react-router-dom";
 
 const SearchResults = () => {
   const [filtered, setFiltered] = useState([]);
   const { searchState } = useSelector((state) => ({ ...state }));
+  const nav = useNavigate();
 
   const filterData = () => {
-    // let dt = "";
     const trainDate = new Date(searchState?.date).toLocaleDateString("en-US", {
       month: "2-digit",
       day: "2-digit",
       year: "numeric",
     });
     console.log(trainDate);
-    // const strDate = String(searchState?.date);
-    // if (strDate) {
-    //   const parts = strDate.split("-");
-    //   if (parts[1].startsWith("0")) {
-    //     parts[1] = parts[1].replace("0", "");
-    //   }
-    //   if (parts[2].startsWith("0")) {
-    //     parts[2] = parts[2].replace("0", "");
-    //   }
-    //   dt = `${parts[1]}/${parts[2]}/${parts[0]}`;
-    // }
-    // console.log(dt);
     const filteredDate = trains.filter((train) =>
       new Date(train.date)
         .toLocaleDateString("en-US", {
@@ -70,6 +60,7 @@ const SearchResults = () => {
           {filtered.length > 0 ? (
             filtered.map((item, index) => (
               <Card
+                onClick={() => nav(`/book/${item.flight_id}`)}
                 key={item.flight_id}
                 destination={item.destination}
                 date_depart={item.date_time_depart}

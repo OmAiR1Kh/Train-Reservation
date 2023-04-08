@@ -1,3 +1,4 @@
+@import "../../variables/variables.scss";
 .left-section {
   display: flex;
   flex-direction: column;
@@ -20,7 +21,7 @@
       justify-self: center;
     }
     button {
-      background: #0578ff;
+      background: $blue;
       color: #fff;
       border: none;
       outline: none;
@@ -46,7 +47,7 @@
       justify-items: space-between;
       grid-template-columns: 1fr 1fr;
       div {
-        border-bottom: 1px solid #808080;
+        border-bottom: 1px solid $gray;
         padding: 0.2rem;
         display: flex;
         align-items: center;
@@ -57,7 +58,7 @@
           border: none;
           outline: none;
           width: 90%;
-          color: #808080;
+          color: $gray;
           appearance: none;
           &::-webkit-inner-spin-button,
           &::-webkit-calendar-picker-indicator {

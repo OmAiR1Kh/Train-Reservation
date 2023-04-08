@@ -1,3 +1,4 @@
+@import '../variables/variables.scss';
 .res-container {
   width: 40%;
   display: flex;
@@ -9,7 +10,7 @@
     justify-items: space-between;
     gap: 1rem;
     div {
-      border-bottom: 1px solid #808080;
+      border-bottom: 1px solid $gray;
       padding: 0.2rem;
       display: flex;
       align-items: center;
@@ -20,7 +21,7 @@
         border: none;
         outline: none;
         width: 90%;
-        color: #808080;
+        color: $gray;
         background: transparent;
         appearance: none;
         &::-webkit-inner-spin-button,
@@ -41,7 +42,7 @@
     }
     button {
       border-radius: 12px;
-      background: #0578ff;
+      background: $blue;
       color: #fff;
       border: none;
       outline: none;
@@ -87,7 +88,7 @@
   .results-header {
     display: flex;
     align-items: center;
-    border-bottom: 1px solid #80808086;
+    border-bottom: 1px solid $gray86;
     span {
       font-size: 0.6rem;
     }
@@ -109,7 +110,7 @@
       width: 8px;
     }
     &::-webkit-scrollbar-thumb{
-      background-color: #0578ff;
+      background-color: $blue;
       border-radius: 5px;
     }
   }

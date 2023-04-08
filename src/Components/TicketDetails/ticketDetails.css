@@ -1,0 +1,70 @@
+.cancel {
+  background: transparent;
+  color: #f00;
+  border: none;
+  outline: none;
+}
+.cancel:focus {
+  outline: none;
+}
+
+.book-now {
+  width: 100%;
+  background: #0578ff;
+  color: #fff;
+}
+
+.apply-code {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  justify-content: space-between;
+  width: 100%;
+  border: 1px solid #808080;
+  padding: 1rem;
+}
+.apply-code .title {
+  display: flex;
+  align-items: center;
+  width: 30%;
+  justify-content: space-evenly;
+}
+.apply-code .code-input {
+  border-bottom: 1px solid #808080;
+  width: 60%;
+  padding: 0.5rem;
+}
+.apply-code .code-input input {
+  border: none;
+  outline: none;
+}
+
+.bill-details {
+  width: 100%;
+  border: 1px solid #808080;
+  padding: 1rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.bill-details > span {
+  color: #808080;
+  font-size: 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.bill-details > span span {
+  line-height: 1.2rem;
+}
+.bill-details h4 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.details {
+  text-align: center;
+  font-size: 0.6rem;
+  color: #808080;
+}/*# sourceMappingURL=ticketDetails.css.map */

@@ -1,5 +1,6 @@
+@import "../variables/variables.scss";
 .footer-container {
-  background: #0578ff;
+  background: $blue;
   width: 100%;
   min-height: 160px;
   display: flex;

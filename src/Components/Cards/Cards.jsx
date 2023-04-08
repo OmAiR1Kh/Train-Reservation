@@ -15,7 +15,7 @@ const Card = (props) => {
   };
   return (
     <>
-      <div className="card">
+      <section className="card" onClick={props.onClick}>
         <h4 style={{ lineHeight: "0rem", paddingTop: "-0.2rem" }}>
           {props.destination}
         </h4>
@@ -73,7 +73,7 @@ const Card = (props) => {
             </span>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };

@@ -3,6 +3,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable semi */
 /* eslint-disable react/react-in-jsx-scope */
+import './App.css'
 import { Routes, Route, useLocation } from "react-router-dom";
 // import picture from './assets/trying.svg'
 import Footer from "./Components/Footer/Footer";
@@ -11,6 +12,7 @@ import Theme from "./Components/Theme/Theme";
 import Home from "./Layouts/Home/Home";
 import { useCallback, useEffect, useState } from "react";
 import Results from "./Layouts/SearchResuts/Results";
+import BookingReview from "./Layouts/BookingReview/BookingReview";
 
 const App = () => {
   const location = useLocation();
@@ -24,11 +26,14 @@ const App = () => {
   return (
     <div className="App">
       {location.pathname !== "/" && <Navbar />}
-      <Theme background={location.pathname !== "/" && "#f5f5f5"}>
+      <Theme background={location.pathname === "/search-results" && "#f5f5f5"}>
         <Routes>
           <Route path="/" element={<Home />}></Route>
           {isSearching && (
-            <Route path="/search-results" element={<Results />} />
+            <>
+              <Route path="/search-results" element={<Results />} />
+              <Route path="/book/:id" element={<BookingReview />} />
+            </>
           )}
           <Route
             path="/*"
@@ -47,6 +52,7 @@ const App = () => {
         </Routes>
       </Theme>
       <Footer />
+      {console.clear()}
     </div>
   );
 };

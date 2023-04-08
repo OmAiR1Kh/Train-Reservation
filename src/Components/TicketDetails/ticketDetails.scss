@@ -1,0 +1,68 @@
+@import "../variables/variables.scss";
+.cancel {
+  background: transparent;
+  color: #f00;
+  border: none;
+  outline: none;
+  &:focus {
+    outline: none;
+  }
+}
+.book-now {
+  width: 100%;
+  background: $blue;
+  color: #fff;
+}
+
+.apply-code {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  justify-content: space-between;
+  width: 100%;
+  border: 1px solid $gray;
+  padding: 1rem;
+  .title {
+    display: flex;
+    align-items: center;
+    width: 30%;
+    justify-content: space-evenly;
+  }
+  .code-input {
+    border-bottom: 1px solid $gray;
+    width: 60%;
+    padding: 0.5rem;
+    input {
+      border: none;
+      outline: none;
+    }
+  }
+}
+.bill-details {
+  width: 100%;
+  border: 1px solid $gray;
+  padding: 1rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  & > span {
+    color: $gray;
+    font-size: 0.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    span {
+      line-height: 1.2rem;
+    }
+  }
+  h4 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.details {
+  text-align: center;
+  font-size: 0.6rem;
+  color: $gray;
+}

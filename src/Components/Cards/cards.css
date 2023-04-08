@@ -3,8 +3,12 @@
   background: #fff;
   padding: 1rem;
   height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   gap: 0.5rem;
   border-radius: 10px;
+  width: 100%;
 }
 .card .runs-on {
   display: flex;
@@ -100,4 +104,14 @@
 }
 .card .prices div:last-child {
   background: #ffcdcd;
+}
+.card .review-button {
+  border: 1px solid #0578ff;
+  background: transparent;
+  padding: 5px;
+  width: 40%;
+  font-size: 0.8rem;
+}
+.card .review-button:focus {
+  outline: none;
 }/*# sourceMappingURL=cards.css.map */

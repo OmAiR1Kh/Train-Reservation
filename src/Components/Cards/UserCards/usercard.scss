@@ -1,0 +1,90 @@
+@import "../../variables/variables.scss";
+.user-data {
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23333' stroke-width='4' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+  width: 90%;
+  border: 1px solid $gray;
+  background: transparent;
+  padding: 1.5rem;
+  border-radius: 10px;
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    p {
+      font-size: 1rem;
+    }
+    span {
+      color: $gray;
+      font-size: 0.6rem;
+    }
+  }
+  .user {
+    background-color: $light-blue;
+    // height: 50px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    ol {
+      width: 85%;
+    }
+    li {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+    }
+    .icons {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-right: 0.7rem;
+      width: 15%;
+      img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+  form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    div {
+      border-bottom: 1px solid $gray;
+      padding: 0.5rem;
+      input,
+      select {
+        outline: none;
+        border: none;
+        color: $gray;
+        &::placeholder {
+          color: $gray;
+        }
+        &:focus {
+          border: none;
+          outline: none;
+        }
+      }
+    }
+    button {
+      background: $blue;
+      color: #fff;
+      &:focus {
+        border: none;
+        outline: none;
+      }
+    }
+  }
+  .links {
+    width: 100%;
+    display: flex;
+    gap: 3rem;
+    span {
+      font-size: 0.7rem;
+      color: $blue;
+      cursor: pointer;
+    }
+  }
+}

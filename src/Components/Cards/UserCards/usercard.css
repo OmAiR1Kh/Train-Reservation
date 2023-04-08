@@ -1,0 +1,93 @@
+.user-data {
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23333' stroke-width='4' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+  width: 90%;
+  border: 1px solid #808080;
+  background: transparent;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+.user-data .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.user-data .title p {
+  font-size: 1rem;
+}
+.user-data .title span {
+  color: #808080;
+  font-size: 0.6rem;
+}
+.user-data .user {
+  background-color: rgba(5, 122, 255, 0.568627451);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.user-data .user ol {
+  width: 85%;
+}
+.user-data .user li {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.user-data .user .icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 0.7rem;
+  width: 15%;
+}
+.user-data .user .icons img {
+  width: 20px;
+  height: 20px;
+}
+.user-data form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+.user-data form div {
+  border-bottom: 1px solid #808080;
+  padding: 0.5rem;
+}
+.user-data form div input,
+.user-data form div select {
+  outline: none;
+  border: none;
+  color: #808080;
+}
+.user-data form div input::-moz-placeholder, .user-data form div select::-moz-placeholder {
+  color: #808080;
+}
+.user-data form div input::placeholder,
+.user-data form div select::placeholder {
+  color: #808080;
+}
+.user-data form div input:focus,
+.user-data form div select:focus {
+  border: none;
+  outline: none;
+}
+.user-data form button {
+  background: #0578ff;
+  color: #fff;
+}
+.user-data form button:focus {
+  border: none;
+  outline: none;
+}
+.user-data .links {
+  width: 100%;
+  display: flex;
+  gap: 3rem;
+}
+.user-data .links span {
+  font-size: 0.7rem;
+  color: #0578ff;
+  cursor: pointer;
+}/*# sourceMappingURL=usercard.css.map */
