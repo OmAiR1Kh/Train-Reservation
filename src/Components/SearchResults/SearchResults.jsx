@@ -44,6 +44,10 @@ const SearchResults = () => {
     setFiltered(filteredDestination);
   };
 
+  // const handleClick = (e) => {
+
+  // };
+
   useEffect(() => {
     if (searchState !== null) filterData();
   }, [searchState]);
@@ -58,9 +62,11 @@ const SearchResults = () => {
         </div>
         <div className="results-content">
           {filtered.length > 0 ? (
-            filtered.map((item, index) => (
+            filtered.map((item) => (
               <Card
-                onClick={() => nav(`/book/${item.flight_id}`)}
+                onClick={() => {
+                  nav(`/book/${item.flight_id}`);
+                }}
                 key={item.flight_id}
                 destination={item.destination}
                 date_depart={item.date_time_depart}

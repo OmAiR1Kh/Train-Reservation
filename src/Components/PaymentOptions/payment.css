@@ -1,0 +1,45 @@
+.payment-option {
+  align-items: center;
+  border-bottom: 1px solid #808080;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.payment-option form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.payment-option form input {
+  padding: 0.5rem;
+  border: 1px solid #808080;
+  border-radius: 8px;
+  outline: none;
+}
+.payment-option form input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.StripeCheckout {
+  width: 100% !important;
+  border: none !important;
+  margin-bottom: 0.5rem;
+  background: #0578ff !important;
+  box-shadow: none !important;
+}
+.StripeCheckout span {
+  padding: 0.5rem !important;
+  font-size: 1.2rem !important;
+  background: #0578ff !important;
+  border: none !important;
+}
+.StripeCheckout:hover {
+  opacity: 0.8;
+  transition: ease-in-out 0.5s;
+}
+
+.paypal-button .paypal-button-number-0 .paypal-button-layout-horizontal .paypal-button-shape-rect .paypal-button-number-single .paypal-button-env-sandbox .paypal-button-color-gold .paypal-button-text-color-black .paypal-logo-color-blue {
+  background: #0578ff !important;
+}/*# sourceMappingURL=payment.css.map */

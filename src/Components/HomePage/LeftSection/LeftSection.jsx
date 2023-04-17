@@ -8,9 +8,11 @@ import data from "../../../TrainData.json";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import "./leftSection.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 const LeftSection = () => {
   const [search, setSearch] = useState({});
+  const [origin, setOrigin] = useState([]);
+  const [destination, setDestination] = useState([]);
   const [error, setError] = useState("");
   const nav = useNavigate();
   const dispatch = useDispatch();
@@ -18,6 +20,26 @@ const LeftSection = () => {
     const { name, value } = e.target;
     setSearch({ ...search, [name]: value });
   };
+
+  const handleData = () => {
+    setOrigin(
+      data.filter((obj, index, arr) => {
+        return arr.map((mapObj) => mapObj.origin).indexOf(obj.origin) === index;
+      })
+    );
+    setDestination(
+      data.filter((obj, index, arr) => {
+        return (
+          arr.map((mapObj) => mapObj.destination).indexOf(obj.destination) ===
+          index
+        );
+      })
+    );
+  };
+
+  useEffect(() => {
+    handleData();
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -68,7 +90,7 @@ const LeftSection = () => {
               <option value={1} disabled>
                 Please Select Your origin Area
               </option>
-              {data.map((train) => {
+              {origin.map((train) => {
                 return (
                   <option key={train.flight_id} value={train.origin}>
                     {train.origin}
@@ -86,7 +108,7 @@ const LeftSection = () => {
               <option value={1} disabled>
                 Please Select Your Destination
               </option>
-              {data.map((train) => {
+              {destination.map((train) => {
                 return (
                   <option key={train.flight_id} value={train.destination}>
                     {train.destination}

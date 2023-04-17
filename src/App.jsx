@@ -3,7 +3,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable semi */
 /* eslint-disable react/react-in-jsx-scope */
-import './App.css'
+import "./App.css";
 import { Routes, Route, useLocation } from "react-router-dom";
 // import picture from './assets/trying.svg'
 import Footer from "./Components/Footer/Footer";
@@ -13,6 +13,7 @@ import Home from "./Layouts/Home/Home";
 import { useCallback, useEffect, useState } from "react";
 import Results from "./Layouts/SearchResuts/Results";
 import BookingReview from "./Layouts/BookingReview/BookingReview";
+import ConfirmBooking from "./Layouts/ConfirmBooking/ConfirmBooking";
 
 const App = () => {
   const location = useLocation();
@@ -33,6 +34,11 @@ const App = () => {
             <>
               <Route path="/search-results" element={<Results />} />
               <Route path="/book/:id" element={<BookingReview />} />
+              <Route path="/cashout/:id" element={<ConfirmBooking />} />
+              <Route
+                path="/thank-you"
+                element={<p>Thank you for your purchase</p>}
+              />
             </>
           )}
           <Route

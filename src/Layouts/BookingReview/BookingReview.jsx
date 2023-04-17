@@ -37,11 +37,16 @@ const BookingReview = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setTimeout(() => {}, 500);
     if (!input.email || !input.mobile) {
       setError("Please Fill at Least One Contact Method");
+      setTimeout(() => {
+        setError("");
+      }, 1500);
     } else {
       localStorage.setItem("contact", JSON.stringify(input));
-      nav("/confirm-booking");
+      localStorage.setItem("price", 1000 * users.length + 500);
+      nav(`/cashout/${id}`);
     }
   };
 

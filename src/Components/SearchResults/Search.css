@@ -93,7 +93,7 @@
 .results .results-header {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid rgba(128, 128, 128, 0.5254901961);
+  border-bottom: 1px solid #808080;
 }
 .results .results-header span {
   font-size: 0.6rem;

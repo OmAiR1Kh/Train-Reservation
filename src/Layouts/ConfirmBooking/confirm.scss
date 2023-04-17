@@ -1,0 +1,12 @@
+@import "../../Components/variables/variables.scss";
+
+.confirm-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 80%;
+  margin: auto;
+  .boarding-details {
+    margin-bottom: 1rem;
+    align-items: center;
+  }
+}

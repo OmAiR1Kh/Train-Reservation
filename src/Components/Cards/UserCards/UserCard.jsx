@@ -42,6 +42,12 @@ const UserCard = () => {
     const { value, name } = e.target;
     setData({ ...data, [name]: value });
   };
+  const getUsers = () => {
+    localStorage.getItem("users");
+  };
+  useEffect(() => {
+    getUsers();
+  }, [users]);
   const handleDelete = (name) => {
     let toDelete = "";
     console.log(name);
@@ -91,7 +97,7 @@ const UserCard = () => {
           </span>
           <img src={plus} alt="" />
         </div>
-        {users && (
+        {users.length > 0 && (
           <div className="user">
             <ol>
               {users.length > 0 &&

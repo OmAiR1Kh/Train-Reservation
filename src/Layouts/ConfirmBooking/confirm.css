@@ -1,0 +1,10 @@
+.confirm-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 80%;
+  margin: auto;
+}
+.confirm-container .boarding-details {
+  margin-bottom: 1rem;
+  align-items: center;
+}/*# sourceMappingURL=confirm.css.map */

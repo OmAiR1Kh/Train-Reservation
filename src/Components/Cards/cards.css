@@ -114,4 +114,21 @@
 }
 .card .review-button:focus {
   outline: none;
+}
+
+.traveler-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.traveler-details .details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  width: 90%;
+}
+.traveler-details .details span {
+  color: #808080;
 }/*# sourceMappingURL=cards.css.map */
