@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions */
 /* eslint-disable comma-dangle */
 /* eslint-disable react/prop-types */
 /* eslint-disable quotes */
@@ -20,6 +21,7 @@ const LeftSection = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setSearch({ ...search, [name]: value });
+    console.log(search);
   };
 
   const handleOrigin = (e) => {
@@ -31,6 +33,7 @@ const LeftSection = () => {
 
     setFilter(selectedOrigin);
     setDestination(destinations);
+    setSearch({ ...search, origin: selectedOrigin, destination: "0" });
     console.log(search);
   };
 
@@ -111,9 +114,9 @@ const LeftSection = () => {
             <select
               name="destination"
               onChange={handleChange}
-              value={search?.destination || 1000}
+              value={search?.destination || 0}
             >
-              <option value={1000} disabled>
+              <option value={0} disabled>
                 Please Select Your Destination
               </option>
               {destination.map((train, index) => {
