@@ -7,12 +7,14 @@
 /* eslint-disable react/react-in-jsx-scope */
 
 import axios from "axios";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import StripeCheckout from "react-stripe-checkout";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 
 const CheckoutForm = (props) => {
+  const [state, setState] = useState(false);
   const mySwal = withReactContent(Swal);
   const publishableKey =
     "pk_test_51MxXOGG0f4ZBB4gD9HCm09daLZXs0cBCWf1r95vY9vQbzlh1jSwRNY21dHnjkoVRgc2GPpuyiyMfG7wgp0gZ75k200SiisV9HB";
@@ -39,12 +41,16 @@ const CheckoutForm = (props) => {
         });
         localStorage.setItem("payment", true);
         nav("/thank-you");
-        window.location.reload()
+        setState(false);
       }
     } catch (error) {
       console.log(error);
     }
   };
+
+  useEffect(() => {
+    setState(false);
+  }, [state]);
 
   return (
     <>
