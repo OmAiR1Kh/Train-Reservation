@@ -1,0 +1,87 @@
+@import "../../components/variables/variables.scss";
+
+.container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  .thank-you {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    img {
+      height: 50px;
+    }
+    p {
+      color: #31a91d;
+      font-size: 1.2rem;
+      line-height: 0.8rem;
+    }
+    span {
+      font-size: 0.6rem;
+      color: $gray;
+    }
+  }
+  .ticket-details {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 1rem;
+    .data-container {
+      width: 60%;
+      border: 1px solid $gray;
+      border-radius: 10px;
+      gap: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0.4rem 0.2rem 0.2rem 0.1rem;
+      div {
+        width: 90%;
+      }
+      .titles {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 0.8rem;
+      }
+    }
+    .qr-container {
+      width: 30%;
+      display: flex;
+      gap: 0.5rem;
+      flex-direction: column;
+      align-items: center;
+      .qr-code {
+        width: 50%;
+        height: 10rem;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+      }
+      button {
+        outline: none;
+        border: none;
+        padding: 0.8rem;
+        width: 100%;
+        border-radius: 10px;
+      }
+      .top-button {
+        background: transparent;
+        border: 1px solid $blue;
+        color: black;
+      }
+      .lower-button {
+        color: #fff;
+        background: $blue;
+      }
+    }
+  }
+}

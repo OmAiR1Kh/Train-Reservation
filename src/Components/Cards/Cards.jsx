@@ -9,10 +9,6 @@ import "./cards.css";
 
 const Card = (props) => {
   const [requiredTime, setRequiredTime] = useState("8 hours");
-  const calculateTime = () => {
-    console.log(props.time_depart - props.time_arrival);
-    setRequiredTime(props.time_depart - props.time_arrival);
-  };
   return (
     <>
       <section

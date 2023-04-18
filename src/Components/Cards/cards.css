@@ -36,43 +36,6 @@
   font-size: 0.6rem;
   cursor: pointer;
 }
-.card .date-data {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  font-size: 0.8rem;
-}
-.card .date-data section {
-  width: 60%;
-}
-.card .date-data section p {
-  width: 100%;
-  border-bottom: 1px solid #808080;
-  text-align: center;
-  font-size: 0.8rem;
-  color: #808080;
-}
-.card .date-data section p::before, .card .date-data section p::after {
-  content: "";
-  width: 5px;
-  height: 5px;
-  background: #808080;
-}
-.card .date-data div {
-  line-height: 0.8rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 18%;
-}
-.card .date-data div p {
-  text-align: center;
-  line-height: 1.2rem;
-}
-.card .date-data div span {
-  font-weight: 300;
-}
 .card .prices {
   width: 100%;
   display: flex;
@@ -131,4 +94,42 @@
 }
 .traveler-details .details span {
   color: #808080;
+}
+
+.date-data {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 0.8rem;
+}
+.date-data section {
+  width: 60%;
+}
+.date-data section p {
+  width: 100%;
+  border-bottom: 1px solid #808080;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #808080;
+}
+.date-data section p::before, .date-data section p::after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  background: #808080;
+}
+.date-data div {
+  line-height: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 18%;
+}
+.date-data div p {
+  text-align: center;
+  line-height: 1.2rem;
+}
+.date-data div span {
+  font-weight: 300;
 }/*# sourceMappingURL=cards.css.map */

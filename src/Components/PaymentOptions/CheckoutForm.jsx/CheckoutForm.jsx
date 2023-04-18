@@ -13,7 +13,7 @@ import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 
 const CheckoutForm = (props) => {
-  const mySwal = withReactContent(Swal)
+  const mySwal = withReactContent(Swal);
   const publishableKey =
     "pk_test_51MxXOGG0f4ZBB4gD9HCm09daLZXs0cBCWf1r95vY9vQbzlh1jSwRNY21dHnjkoVRgc2GPpuyiyMfG7wgp0gZ75k200SiisV9HB";
   const priceForStripe = props.price * 100;
@@ -37,7 +37,11 @@ const CheckoutForm = (props) => {
           text: "Reservation Successful",
           icon: "success",
         });
-        nav("/thank-you");
+        localStorage.setItem("payment", true);
+        setTimeout(() => {
+          nav("/thank-you");
+          window.location.reload();
+        }, 1500);
       }
     } catch (error) {
       console.log(error);

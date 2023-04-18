@@ -70,10 +70,8 @@ const SearchResults = () => {
                 key={item.flight_id}
                 destination={item.destination}
                 date_depart={item.date_time_depart}
-                // time_depart={item.time_depart}
                 origin={item.origin}
                 date_arrival={item.date_time_arrival}
-                // time_arrival={item.time_arrival}
               />
             ))
           ) : (

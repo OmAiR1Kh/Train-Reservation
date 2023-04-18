@@ -8,11 +8,12 @@ import data from "../../../TrainData.json";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import "./leftSection.css";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 const LeftSection = () => {
   const [search, setSearch] = useState({});
   const [origin, setOrigin] = useState([]);
   const [destination, setDestination] = useState([]);
+  const [toFilter, setFilter] = useState("");
   const [error, setError] = useState("");
   const nav = useNavigate();
   const dispatch = useDispatch();
@@ -21,25 +22,29 @@ const LeftSection = () => {
     setSearch({ ...search, [name]: value });
   };
 
+  const handleOrigin = (e) => {
+    const selectedOrigin = e.target.value;
+    const destinations = data
+      .filter((item) => item.origin === selectedOrigin)
+      .map((item) => item.destination)
+      .filter((value, index, self) => self.indexOf(value) === index);
+
+    setFilter(selectedOrigin);
+    setDestination(destinations);
+    console.log(search);
+  };
+
   const handleData = () => {
     setOrigin(
       data.filter((obj, index, arr) => {
         return arr.map((mapObj) => mapObj.origin).indexOf(obj.origin) === index;
       })
     );
-    setDestination(
-      data.filter((obj, index, arr) => {
-        return (
-          arr.map((mapObj) => mapObj.destination).indexOf(obj.destination) ===
-          index
-        );
-      })
-    );
   };
 
   useEffect(() => {
     handleData();
-  }, []);
+  }, [toFilter, search]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -84,7 +89,10 @@ const LeftSection = () => {
           <div>
             <select
               name="origin"
-              onChange={handleChange}
+              onChange={(e) => {
+                handleChange(e);
+                handleOrigin(e);
+              }}
               defaultValue={search?.origin || 1}
             >
               <option value={1} disabled>
@@ -103,15 +111,15 @@ const LeftSection = () => {
             <select
               name="destination"
               onChange={handleChange}
-              defaultValue={search?.destination || 1}
+              value={search?.destination || 1000}
             >
-              <option value={1} disabled>
+              <option value={1000} disabled>
                 Please Select Your Destination
               </option>
-              {destination.map((train) => {
+              {destination.map((train, index) => {
                 return (
-                  <option key={train.flight_id} value={train.destination}>
-                    {train.destination}
+                  <option key={index} value={train}>
+                    {train}
                   </option>
                 );
               })}

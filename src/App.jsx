@@ -14,14 +14,17 @@ import { useCallback, useEffect, useState } from "react";
 import Results from "./Layouts/SearchResuts/Results";
 import BookingReview from "./Layouts/BookingReview/BookingReview";
 import ConfirmBooking from "./Layouts/ConfirmBooking/ConfirmBooking";
+import ThankYou from "./Layouts/ThankYou/ThankYou";
 
 const App = () => {
   const location = useLocation();
   const [isSearching, setIsSearching] = useState(false);
+  const [payment, setPayment] = useState(false);
   const checkData = useCallback(() => {
     localStorage.getItem("search-data") && setIsSearching(true);
   }, [localStorage.getItem("search-data")]);
   useEffect(() => {
+    localStorage.getItem("payment") && setPayment(true);
     checkData();
   }, [localStorage.getItem("search-data")]);
   return (
@@ -35,10 +38,7 @@ const App = () => {
               <Route path="/search-results" element={<Results />} />
               <Route path="/book/:id" element={<BookingReview />} />
               <Route path="/cashout/:id" element={<ConfirmBooking />} />
-              <Route
-                path="/thank-you"
-                element={<p>Thank you for your purchase</p>}
-              />
+              {payment && <Route path="/thank-you" element={<ThankYou />} />}
             </>
           )}
           <Route
