@@ -38,10 +38,8 @@ const CheckoutForm = (props) => {
           icon: "success",
         });
         localStorage.setItem("payment", true);
-        setTimeout(() => {
-          nav("/thank-you");
-          window.location.reload();
-        }, 1500);
+        nav("/thank-you");
+        window.location.reload()
       }
     } catch (error) {
       console.log(error);
