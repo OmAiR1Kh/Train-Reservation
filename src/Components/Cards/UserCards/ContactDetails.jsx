@@ -5,17 +5,15 @@
 /* eslint-disable semi */
 /* eslint-disable react/react-in-jsx-scope */
 
-import { useState } from "react";
-
 const ContactDetails = ({ email, mobile, onSubmit, onChange, error }) => {
   return (
     <>
-      <div className="user-data">
+      <div className="user-data contact-details">
         <div className="title">
           <p>Contact Details</p>
           <span>Your ticket info will be sent here</span>
         </div>
-        <form onSubmit={onSubmit} style={{ gridTemplateColumns: "1fr 1fr" }}>
+        <form onSubmit={onSubmit} className="add-user-form">
           <div>
             <input
               type="text"

@@ -2,7 +2,6 @@
 .footer-container {
   background: $blue;
   width: 100%;
-  min-height: 160px;
   display: flex;
   flex-direction: column;
   gap: 20%;
@@ -10,7 +9,7 @@
   section {
     width: 90%;
     margin: auto;
-    height: 50px;
+    min-height: 80px;
   }
   .upper-section {
     display: flex;
@@ -88,6 +87,64 @@
       svg {
         font-size: 1.2rem;
         cursor: pointer;
+      }
+    }
+  }
+}
+
+@include for-tablet {
+  .footer-container {
+    padding-bottom: 1rem;
+    .upper-section {
+      margin-bottom: 1rem;
+      flex-direction: column !important;
+      align-items: flex-start;
+      .newsletter-form {
+        width: 100%;
+      }
+    }
+    .bottom-section {
+      flex-direction: column !important;
+      align-items: flex-start;
+      ul {
+        display: grid !important;
+        width: 100%;
+        grid-template-columns: 1fr 1fr 1fr;
+        place-items: center;
+      }
+      .icons {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+      }
+    }
+  }
+}
+
+@include for-mobile {
+  .footer-container {
+    padding-bottom: 1rem;
+    .upper-section {
+      margin-bottom: 1rem;
+      flex-direction: column !important;
+      align-items: flex-start;
+      .newsletter-form {
+        width: 100%;
+      }
+    }
+    .bottom-section {
+      flex-direction: column !important;
+      align-items: flex-start;
+      ul {
+        display: grid !important;
+        width: 100%;
+        grid-template-columns: 1fr 1fr !important;
+        place-items: center;
+      }
+      .icons {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
       }
     }
   }

@@ -37,26 +37,24 @@ const BoardingDetails = () => {
   }, []);
   return (
     <>
-      <div className="boarding-details">
-        <ReviewCard
-          height="300px"
-          width="95%"
-          details={true}
-          requiredTime={8}
-          destination={flight[0]?.destination}
-          date_arrival={flight[0]?.date_time_arrival}
-          origin={flight[0]?.origin}
-          date_depart={flight[0]?.date_time_depart}
-        />
-        <PayPalScriptProvider
-          options={{
-            "client-id":
-              "Aa2gYG1-LALc1ggSHaq8PaCJehBJvAMv5ZPbNO4824nJ70Uihc7luBUt_jH1-tgrIBf6uDWZ5EpUwkeq",
-          }}
-        >
-          <PaymentOption email={contact.email} amount={number}/>
-        </PayPalScriptProvider>
-      </div>
+      <ReviewCard
+        minHeight="300px"
+        width="95%"
+        details={true}
+        requiredTime={8}
+        destination={flight[0]?.destination}
+        date_arrival={flight[0]?.date_time_arrival}
+        origin={flight[0]?.origin}
+        date_depart={flight[0]?.date_time_depart}
+      />
+      <PayPalScriptProvider
+        options={{
+          "client-id":
+            "Aa2gYG1-LALc1ggSHaq8PaCJehBJvAMv5ZPbNO4824nJ70Uihc7luBUt_jH1-tgrIBf6uDWZ5EpUwkeq",
+        }}
+      >
+        <PaymentOption email={contact.email} amount={number} />
+      </PayPalScriptProvider>
     </>
   );
 };

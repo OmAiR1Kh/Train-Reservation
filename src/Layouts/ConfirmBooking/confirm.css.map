@@ -1,1 +1,1 @@
-{"version":3,"sources":["confirm.scss","confirm.css"],"names":[],"mappings":"AAEA;EACE,aAAA;EACA,8BAAA;EACA,UAAA;EACA,YAAA;ACDF;ADEE;EACE,mBAAA;EACA,mBAAA;ACAJ","file":"confirm.css"}
+{"version":3,"sources":["confirm.scss","confirm.css","../../Components/variables/variables.scss"],"names":[],"mappings":"AAEA;EACE,aAAA;EACA,8BAAA;EACA,UAAA;EACA,YAAA;ACDF;ADEE;EACE,mBAAA;EACA,mBAAA;ACAJ;;ACaE;EFRA;IACE,aAAA;IACA,sBAAA;IACA,SAAA;ECDF;AACF","file":"confirm.css"}

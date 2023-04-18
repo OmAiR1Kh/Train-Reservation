@@ -1,4 +1,4 @@
-@import '../variables/variables.scss';
+@import "../variables/variables.scss";
 .res-container {
   width: 40%;
   display: flex;
@@ -109,9 +109,37 @@
       background-color: #fff;
       width: 8px;
     }
-    &::-webkit-scrollbar-thumb{
+    &::-webkit-scrollbar-thumb {
       background-color: $blue;
       border-radius: 5px;
     }
+  }
+}
+
+@include for-tablet {
+  .res-container {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 2.5rem;
+  }
+  .hide {
+    display: none !important;
+  }
+  .results {
+    margin: auto;
+    width: 90%;
+    padding-bottom: 1rem;
+    .results-header {
+      img {
+        display: none;
+      }
+    }
+  }
+}
+
+@include for-mobile {
+  .result-form {
+    display: flex !important;
+    flex-direction: column !important;
   }
 }

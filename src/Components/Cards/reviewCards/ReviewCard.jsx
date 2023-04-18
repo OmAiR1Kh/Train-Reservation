@@ -26,10 +26,10 @@ const ReviewCard = (props) => {
   return (
     <>
       <div
-        className="card"
+        className="card boarding-details-card"
         style={{
           background: "#0578FF1A",
-          height: props.height ? props.height : "230px",
+          height: props.height ? props.height : "280px",
           gap: "1rem",
           width: props.width,
         }}

@@ -79,6 +79,10 @@
   outline: none;
 }
 
+.boarding-details-card {
+  width: 100% !important;
+}
+
 .traveler-details {
   display: flex;
   flex-direction: column;
@@ -132,4 +136,25 @@
 }
 .date-data div span {
   font-weight: 300;
+}
+
+@media (768px > width) {
+  .card {
+    height: 560px !important;
+    width: 80% !important;
+  }
+  .boarding-details-card {
+    width: 93% !important;
+    height: 290px !important;
+  }
+  .prices {
+    flex-direction: column;
+    width: 100% !important;
+  }
+  .prices div {
+    width: 100% !important;
+  }
+  .prices div span {
+    width: 100%;
+  }
 }/*# sourceMappingURL=cards.css.map */

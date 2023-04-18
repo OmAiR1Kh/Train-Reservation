@@ -18,4 +18,13 @@
   align-items: center;
   justify-content: space-between;
   width: 20%;
+}
+
+@media (768px > width) {
+  .navbar {
+    justify-content: center;
+  }
+  .login {
+    display: none !important;
+  }
 }/*# sourceMappingURL=navbar.css.map */

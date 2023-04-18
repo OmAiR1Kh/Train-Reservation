@@ -4,4 +4,10 @@
   display: flex;
   justify-content: space-between;
   gap: 2rem;
+}
+
+@media (1050px > width) {
+  .review-container {
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=review.css.map */

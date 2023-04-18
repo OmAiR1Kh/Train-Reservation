@@ -4,4 +4,10 @@
   display: flex;
   justify-content: space-around;
   margin-bottom: 1rem;
+}
+
+@media (768px > width) {
+  .results-container {
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=results.css.map */

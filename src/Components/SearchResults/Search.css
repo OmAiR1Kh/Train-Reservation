@@ -118,4 +118,29 @@
 .results .results-content::-webkit-scrollbar-thumb {
   background-color: #0578ff;
   border-radius: 5px;
+}
+
+@media (768px > width) {
+  .res-container {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 2.5rem;
+  }
+  .hide {
+    display: none !important;
+  }
+  .results {
+    margin: auto;
+    width: 90%;
+    padding-bottom: 1rem;
+  }
+  .results .results-header img {
+    display: none;
+  }
+}
+@media (420px > width) {
+  .result-form {
+    display: flex !important;
+    flex-direction: column !important;
+  }
 }/*# sourceMappingURL=Search.css.map */

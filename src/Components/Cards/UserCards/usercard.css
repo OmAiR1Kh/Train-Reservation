@@ -28,7 +28,9 @@
   width: 100%;
 }
 .user-data .user ol {
-  width: 85%;
+  width: 90%;
+  margin: auto;
+  padding: 0.7rem;
 }
 .user-data .user li {
   display: flex;
@@ -90,4 +92,32 @@
   font-size: 0.7rem;
   color: #0578ff;
   cursor: pointer;
+}
+
+.contact-details form {
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (768px > width) {
+  .add-user-form {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100%;
+  }
+  .add-user-form div {
+    width: 100% !important;
+  }
+  .add-user-form div input {
+    width: 100% !important;
+  }
+}
+@media (1050px > width) {
+  .booking-user-form {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100%;
+  }
+  .review-container .user-section {
+    width: 100% !important;
+  }
 }/*# sourceMappingURL=usercard.css.map */

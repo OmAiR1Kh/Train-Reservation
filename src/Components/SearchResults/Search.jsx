@@ -109,17 +109,17 @@ const Search = () => {
         </button>
         {error !== "" && <p className="error-message">{error}</p>}
       </form>
-      <div className="palms h-20">
+      <div className="palms hide">
         <p>
           Planning your holidays <BsChevronDoubleRight />
         </p>
       </div>
-      <div className="temple">
+      <div className="temple hide">
         <p>
           Train tourism packages <BsChevronDoubleRight />
         </p>
       </div>
-      <div>
+      <div className="hide">
         <p style={{ color: "#808080", fontSize: "0.6rem" }}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et olore magna aliqua. Lorem ipsum

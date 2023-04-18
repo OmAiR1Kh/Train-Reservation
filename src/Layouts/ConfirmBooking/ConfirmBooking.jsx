@@ -35,8 +35,10 @@ const ConfirmBooking = () => {
           Pay<span style={{ color: "#ff6060" }}> ₹{number}</span> to confirm
           booking
         </h4>
-        <BoardingDetails />
-        <div className="boarding-details">
+        <div className="boarding-details-div">
+          <BoardingDetails />
+        </div>
+        <div className="boarding-details-div">
           <OffersCard />
           <div className="apply-code">
             <div className="title">

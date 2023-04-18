@@ -119,7 +119,7 @@ const UserCard = () => {
           </div>
         )}
         <p style={{ fontSize: "0.8rem" }}>Traveller Details</p>
-        <form onSubmit={handleUserSubmit}>
+        <form onSubmit={handleUserSubmit} className="add-user-form booking-user-form">
           <div>
             <input
               type="text"

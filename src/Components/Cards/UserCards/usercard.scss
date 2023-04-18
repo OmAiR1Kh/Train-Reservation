@@ -28,7 +28,9 @@
     align-items: center;
     width: 100%;
     ol {
-      width: 85%;
+      width: 90%;
+      margin: auto;
+      padding: 0.7rem;
     }
     li {
       display: flex;
@@ -85,6 +87,39 @@
       font-size: 0.7rem;
       color: $blue;
       cursor: pointer;
+    }
+  }
+}
+
+.contact-details {
+  form {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@include for-tablet {
+  .add-user-form {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100%;
+    div {
+      width: 100% !important;
+      input {
+        width: 100% !important;
+      }
+    }
+  }
+}
+
+@include for-laptop {
+  .booking-user-form{
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100%;
+  }
+  .review-container{
+    .user-section{
+      width: 100% !important;
     }
   }
 }

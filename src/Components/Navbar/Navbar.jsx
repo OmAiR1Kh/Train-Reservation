@@ -16,7 +16,7 @@ const Navbar = () => {
       >
         Metro<span style={{ color: "#000" }}>Way</span>
       </p>
-      <div>
+      <div className="login">
         <p onClick={() => nav("/my-booking")}>My Booking</p>/
         <p style={{ color: "#0578ff" }} onClick={() => nav("/login")}>
           Login / Sign In

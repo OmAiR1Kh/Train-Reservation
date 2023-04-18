@@ -9,4 +9,13 @@
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+@media (768px > width) {
+  .train-image {
+    display: none;
+  }
+  .left-section {
+    margin-bottom: 1rem;
+  }
 }/*# sourceMappingURL=home.css.map */

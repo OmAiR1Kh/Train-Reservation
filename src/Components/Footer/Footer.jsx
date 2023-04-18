@@ -58,7 +58,7 @@ const Footer = () => {
             <Link to="/">Customer Service</Link>
           </li>
         </ul>
-        <div>
+        <div className="icons">
           <TbBrandFacebook onClick={() => nav("/")} />
           <TbBrandInstagram onClick={() => nav("/")} />
           <TbBrandTwitter onClick={() => nav("/")} />

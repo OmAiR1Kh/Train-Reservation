@@ -7,4 +7,12 @@
 .confirm-container .boarding-details {
   margin-bottom: 1rem;
   align-items: center;
+}
+
+@media (768px > width) {
+  .confirm-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
 }/*# sourceMappingURL=confirm.css.map */

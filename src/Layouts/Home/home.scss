@@ -1,3 +1,5 @@
+@import "../../Components/variables/variables.scss";
+
 .home-container {
   display: flex;
   justify-content: space-between;
@@ -7,5 +9,14 @@
       width: 100%;
       object-fit: contain;
     }
+  }
+}
+
+@include for-tablet {
+  .train-image {
+    display: none;
+  }
+  .left-section {
+    margin-bottom: 1rem;
   }
 }
