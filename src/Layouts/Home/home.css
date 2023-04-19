@@ -11,7 +11,7 @@
      object-fit: contain;
 }
 
-@media (768px > width) {
+@media (1050px > width) {
   .train-image {
     display: none;
   }
