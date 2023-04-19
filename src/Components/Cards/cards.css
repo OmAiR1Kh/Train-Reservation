@@ -138,7 +138,7 @@
   font-weight: 300;
 }
 
-@media (768px > width) {
+@media (max-width = 768px) {
   .card {
     height: 560px !important;
     width: 80% !important;

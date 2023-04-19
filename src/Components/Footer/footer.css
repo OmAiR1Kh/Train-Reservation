@@ -96,7 +96,7 @@
   cursor: pointer;
 }
 
-@media (768px > width) {
+@media (max-width = 768px) {
   .footer-container {
     padding-bottom: 1rem;
   }
@@ -124,7 +124,7 @@
     justify-content: space-evenly;
   }
 }
-@media (420px > width) {
+@media (max-width = 420px) {
   .footer-container {
     padding-bottom: 1rem;
   }

@@ -11,7 +11,7 @@
      object-fit: contain;
 }
 
-@media (1050px > width) {
+@media (max-width = 1050px) {
   .train-image {
     display: none;
   }

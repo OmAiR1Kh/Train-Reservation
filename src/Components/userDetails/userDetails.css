@@ -7,7 +7,7 @@
   align-items: center;
 }
 
-@media (768px > width) {
+@media (max-width = 768px) {
   .user-section {
     width: 100%;
   }

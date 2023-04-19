@@ -1,1 +1,1 @@
-{"version":3,"sources":["userDetails.scss","userDetails.css","../variables/variables.scss"],"names":[],"mappings":"AACA;EACE,aAAA;EACA,sBAAA;EACA,SAAA;EACA,mBAAA;EACA,UAAA;EACA,mBAAA;ACAF;;ACeE;EFPA;IACE,WAAA;ECJF;AACF","file":"userDetails.css"}
+{"version":3,"sources":["userDetails.scss","userDetails.css","../variables/variables.scss"],"names":[],"mappings":"AACA;EACE,aAAA;EACA,sBAAA;EACA,SAAA;EACA,mBAAA;EACA,UAAA;EACA,mBAAA;ACAF;;ACeE;EFXA;IACE,WAAA;ECAF;AACF","file":"userDetails.css"}

@@ -5,7 +5,7 @@
   gap: 1rem;
 }
 
-@media (768px > width) {
+@media (max-width = 768px) {
   .boarding-details-div {
     flex-direction: column !important;
   }

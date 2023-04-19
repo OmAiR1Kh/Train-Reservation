@@ -86,7 +86,7 @@
   background: #0578ff;
 }
 
-@media (768px > width) {
+@media (max-width = 768px) {
   .thank-you {
     text-align: center;
   }

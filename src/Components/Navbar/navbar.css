@@ -20,7 +20,7 @@
   width: 20%;
 }
 
-@media (768px > width) {
+@media (max-width = 768px) {
   .navbar {
     justify-content: center;
   }

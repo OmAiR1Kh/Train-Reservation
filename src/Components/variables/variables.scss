@@ -3,24 +3,24 @@ $gray: #808080;
 $light-blue: #057aff91;
 
 @mixin for-desktop {
-  @media (width >= 1274px) {
+  @media (min-width = 1274px) {
     @content;
   }
 }
 @mixin for-laptop {
-  @media (1050px> width) {
+  @media (max-width = 1050px) {
     @content;
   }
 }
 
 @mixin for-mobile {
-  @media (420px > width) {
+  @media (max-width = 420px) {
     @content;
   }
 }
 
 @mixin for-tablet {
-  @media (768px > width) {
+  @media (max-width = 768px) {
     @content;
   }
 }

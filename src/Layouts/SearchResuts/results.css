@@ -6,7 +6,7 @@
   margin-bottom: 1rem;
 }
 
-@media (768px > width) {
+@media (max-width = 768px) {
   .results-container {
     flex-direction: column;
   }

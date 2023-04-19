@@ -8,10 +8,6 @@
   align-items: center;
 }
 
-@include for-laptop{
-  
-}
-
 @include for-tablet {
   .user-section{
     width: 100%;
