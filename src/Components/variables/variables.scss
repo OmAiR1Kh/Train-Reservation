@@ -8,19 +8,19 @@ $light-blue: #057aff91;
   }
 }
 @mixin for-laptop {
-  @media (max-width = 1050px) {
+  @media (max-width : 1050px) {
     @content;
   }
 }
 
 @mixin for-mobile {
-  @media (max-width = 420px) {
+  @media (max-width : 420px) {
     @content;
   }
 }
 
 @mixin for-tablet {
-  @media (max-width = 768px) {
+  @media (max-width : 768px) {
     @content;
   }
 }
