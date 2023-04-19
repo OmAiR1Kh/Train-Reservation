@@ -19,35 +19,28 @@ const UserCard = () => {
   const [user, setUser] = useState([]);
   const [data, setData] = useState({});
   const [error, setError] = useState("");
+  const [shouldUpdate, setShouldUpdate] = useState(false);
+
   const getUser = useCallback(() => {
-    if (localStorage.getItem("user")) {
-      setUser(JSON.parse(localStorage.getItem("user")));
+    const user = localStorage.getItem("user");
+    if (user) {
+      setUser(JSON.parse(user));
+      setShouldUpdate(true);
     } else {
       setUser([]);
     }
-    /* a way to force the re-rendering in React.
-    this will call the function as soon as the window loads since I called it in useEffect
-    and it will recall itself once more causing the re-render */
-
-    setTimeout(() => {
-      getUser();
-    }, 100);
-  });
-
-  useEffect(() => {
-    getUser();
-  }, [localStorage.getItem("user")]);
+  }, [setUser, setShouldUpdate]);
 
   const handleUserChange = (e) => {
     const { value, name } = e.target;
     setData({ ...data, [name]: value });
-  };
-  const getUsers = () => {
-    localStorage.getItem("users");
+    setShouldUpdate(false);
   };
   useEffect(() => {
-    getUsers();
-  }, [users]);
+    getUser();
+    setShouldUpdate(false);
+  }, [users, localStorage.getItem("user"), shouldUpdate]);
+
   const handleDelete = (name) => {
     let toDelete = "";
     console.log(name);
@@ -55,14 +48,15 @@ const UserCard = () => {
       user.name === name;
       toDelete = name;
     });
-    console.log(toDelete);
     users.splice(
       users.findIndex((user) => user.name === toDelete),
       1
     );
     localStorage.setItem("user", JSON.stringify(users));
+    getUser();
   };
   const handleUserSubmit = (e) => {
+    setShouldUpdate(false);
     e.preventDefault();
     let usersVar = [];
     usersVar = user;
@@ -101,8 +95,8 @@ const UserCard = () => {
           <div className="user">
             <ol>
               {users.length > 0 &&
-                users.map((traveler, index) => (
-                  <li key={traveler.name} name={traveler.name}>
+                user.map((traveler, index) => (
+                  <li key={index} name={traveler.name}>
                     {traveler.name}
 
                     <span className="icons">
@@ -119,7 +113,10 @@ const UserCard = () => {
           </div>
         )}
         <p style={{ fontSize: "0.8rem" }}>Traveller Details</p>
-        <form onSubmit={handleUserSubmit} className="add-user-form booking-user-form">
+        <form
+          onSubmit={handleUserSubmit}
+          className="add-user-form booking-user-form"
+        >
           <div>
             <input
               type="text"

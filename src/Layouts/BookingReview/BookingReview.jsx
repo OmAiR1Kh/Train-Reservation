@@ -3,7 +3,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable semi */
 /* eslint-disable react/react-in-jsx-scope */
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import "./review.css";
 import { useNavigate, useParams } from "react-router-dom";
 import trains from "../../TrainData.json";
@@ -18,11 +18,23 @@ const BookingReview = () => {
   const [input, setInput] = useState({});
   const [error, setError] = useState("");
   const [data, setData] = useState({});
+  const [shouldUpdate, setShouldUpdate] = useState(false);
+  const [user, setUser] = useState([]);
 
   const handleChange = (e) => {
     const { value, name } = e.target;
     setInput({ ...input, [name]: value });
   };
+
+  const getUser = useCallback(() => {
+    const user = localStorage.getItem("user");
+    if (user) {
+      setUser(JSON.parse(user));
+    } else {
+      setUser([]);
+    }
+    setShouldUpdate(true);
+  }, [setUser, setShouldUpdate]);
 
   const getData = () => {
     const train = trains.filter(
@@ -33,7 +45,9 @@ const BookingReview = () => {
 
   useEffect(() => {
     getData();
-  }, [id]);
+    getUser();
+    setShouldUpdate(false);
+  }, [id, users, shouldUpdate]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
